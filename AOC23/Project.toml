@@ -1,0 +1,8 @@
+[deps]
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+LongestPaths = "3a25c17e-307c-411a-a047-890a9a5fbb4d"
+MathOptInterface = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
+NLsolve = "2774e3e8-f4cf-5e23-947b-6d7e65073b56"
+TikzGraphs = "b4f28e30-c73f-5eaf-a395-8a9db949a742"
+TikzPictures = "37f6aa50-8035-52d0-81c2-5a1d08754b2d"
