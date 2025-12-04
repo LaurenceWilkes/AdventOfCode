@@ -70,7 +70,7 @@ int tallyUp(queue<int> deck) {
 } // tallyUp
 
 pair<bool, int> recursiveSim(queue<int> deck1, queue<int> deck2) {
-    set<pair<queue<int>, queue<int>>> seenStates;
+    set<pair<queue<int>, queue<int>>> seenStates; // this is a bad way of doing this, better would be to encode the state.
     while (!deck1.empty() && !deck2.empty()) {
 	pair<queue<int>, queue<int>> d12 = {deck1, deck2};
 	if (seenStates.find(d12) != seenStates.end()) {return make_pair(true, 0);}
