@@ -29,12 +29,12 @@ def dist_from(grid, start):
         if cell.isupper():
             req = req | {cell.lower()}
         for dx, dy in DIRS:
-            np = (x+dx, y+dy)
+            np = (x + dx, y + dy)
             if np not in grid or np in seen:
                 continue
             if grid[np] != '#':
                 seen.add(np)
-                q.append((np, dist+1, req))
+                q.append((np, dist + 1, req))
     return found
 
 def build_graph(grid, keys):
