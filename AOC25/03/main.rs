@@ -58,11 +58,11 @@ fn twelve_count(line: &str) -> usize {
     }
 
     let mut out: usize = 0;
-    for (i, v) in vals.iter().enumerate() {
-        let mult = 10usize.pow(11u32 - i as u32);
+    let mut mult = 10usize.pow(11);
+    for v in vals.iter() {
         out += mult * (*v as usize);
+        mult /= 10;
     }
-
     out
 } // process_line
 
