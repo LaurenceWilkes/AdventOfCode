@@ -1,3 +1,4 @@
 **/input.*
 **/*.exe
+**/*.pdb
 **/__pycache__/
