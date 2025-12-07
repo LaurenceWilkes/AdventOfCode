@@ -54,18 +54,15 @@ fn count_futures(grid: &HashMap<(usize, usize), char>, s: usize, no_rows: usize,
     beams[s] = 1;
 
     for i in 1..no_rows {
-        let mut new_beams: Vec<usize> = vec![0_usize; no_rows];
         for j in 0..no_cols {
             if beams[j] == 0 {continue;}
             let coord = (i, j);
             if grid.get(&coord) == Some(&'^') {
-                new_beams[j - 1] += beams[j];
-                new_beams[j + 1] += beams[j];
-            } else {
-                new_beams[j] += beams[j];
-            }
+                beams[j - 1] += beams[j];
+                beams[j + 1] += beams[j];
+                beams[j] = 0;
+            } 
         }
-        beams = new_beams;
     }
 
     beams.iter().sum::<usize>()
